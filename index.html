@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Rotation</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .logo {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+    }
+
+    /* React rotation animation */
+    .rotate {
+      animation: spin 5s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .names {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- React Logo (Rotating) -->
+    <img 
+      src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" 
+      class="logo rotate" 
+      alt="React Logo"
+    >
+
+    <!-- Text in Between -->
+    <div class="names">
+      React <br> + <br> Vite
+    </div>
+
+    <!-- Vite Logo (Stable) -->
+    <img 
+      src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" 
+      class="logo" 
+      alt="Vite Logo"
+    >
+
+  </div>
+
+</body>
+</html>
